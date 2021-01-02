@@ -57,22 +57,9 @@ include CMakeFiles/ca_hw3.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ca_hw3.dir/flags.make
 
-CMakeFiles/ca_hw3.dir/dflow_calc-skeleton.c.o: CMakeFiles/ca_hw3.dir/flags.make
-CMakeFiles/ca_hw3.dir/dflow_calc-skeleton.c.o: ../dflow_calc-skeleton.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ca_hw3.dir/dflow_calc-skeleton.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ca_hw3.dir/dflow_calc-skeleton.c.o   -c "/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/dflow_calc-skeleton.c"
-
-CMakeFiles/ca_hw3.dir/dflow_calc-skeleton.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ca_hw3.dir/dflow_calc-skeleton.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/dflow_calc-skeleton.c" > CMakeFiles/ca_hw3.dir/dflow_calc-skeleton.c.i
-
-CMakeFiles/ca_hw3.dir/dflow_calc-skeleton.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ca_hw3.dir/dflow_calc-skeleton.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/dflow_calc-skeleton.c" -o CMakeFiles/ca_hw3.dir/dflow_calc-skeleton.c.s
-
 CMakeFiles/ca_hw3.dir/dflow_main.c.o: CMakeFiles/ca_hw3.dir/flags.make
 CMakeFiles/ca_hw3.dir/dflow_main.c.o: ../dflow_main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ca_hw3.dir/dflow_main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ca_hw3.dir/dflow_main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ca_hw3.dir/dflow_main.c.o   -c "/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/dflow_main.c"
 
 CMakeFiles/ca_hw3.dir/dflow_main.c.i: cmake_force
@@ -85,7 +72,7 @@ CMakeFiles/ca_hw3.dir/dflow_main.c.s: cmake_force
 
 CMakeFiles/ca_hw3.dir/dflow_calc.cpp.o: CMakeFiles/ca_hw3.dir/flags.make
 CMakeFiles/ca_hw3.dir/dflow_calc.cpp.o: ../dflow_calc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ca_hw3.dir/dflow_calc.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ca_hw3.dir/dflow_calc.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ca_hw3.dir/dflow_calc.cpp.o -c "/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/dflow_calc.cpp"
 
 CMakeFiles/ca_hw3.dir/dflow_calc.cpp.i: cmake_force
@@ -98,19 +85,17 @@ CMakeFiles/ca_hw3.dir/dflow_calc.cpp.s: cmake_force
 
 # Object files for target ca_hw3
 ca_hw3_OBJECTS = \
-"CMakeFiles/ca_hw3.dir/dflow_calc-skeleton.c.o" \
 "CMakeFiles/ca_hw3.dir/dflow_main.c.o" \
 "CMakeFiles/ca_hw3.dir/dflow_calc.cpp.o"
 
 # External object files for target ca_hw3
 ca_hw3_EXTERNAL_OBJECTS =
 
-ca_hw3: CMakeFiles/ca_hw3.dir/dflow_calc-skeleton.c.o
 ca_hw3: CMakeFiles/ca_hw3.dir/dflow_main.c.o
 ca_hw3: CMakeFiles/ca_hw3.dir/dflow_calc.cpp.o
 ca_hw3: CMakeFiles/ca_hw3.dir/build.make
 ca_hw3: CMakeFiles/ca_hw3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ca_hw3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ca_hw3"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ca_hw3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

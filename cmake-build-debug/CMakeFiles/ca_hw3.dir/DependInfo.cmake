@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/dflow_calc-skeleton.c" "/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/cmake-build-debug/CMakeFiles/ca_hw3.dir/dflow_calc-skeleton.c.o"
   "/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/dflow_main.c" "/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/cmake-build-debug/CMakeFiles/ca_hw3.dir/dflow_main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

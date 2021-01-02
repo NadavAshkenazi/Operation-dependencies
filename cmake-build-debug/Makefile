@@ -123,33 +123,6 @@ ca_hw3/fast:
 	$(MAKE) -f CMakeFiles/ca_hw3.dir/build.make CMakeFiles/ca_hw3.dir/build
 .PHONY : ca_hw3/fast
 
-dflow_calc-skeleton.o: dflow_calc-skeleton.c.o
-
-.PHONY : dflow_calc-skeleton.o
-
-# target to build an object file
-dflow_calc-skeleton.c.o:
-	$(MAKE) -f CMakeFiles/ca_hw3.dir/build.make CMakeFiles/ca_hw3.dir/dflow_calc-skeleton.c.o
-.PHONY : dflow_calc-skeleton.c.o
-
-dflow_calc-skeleton.i: dflow_calc-skeleton.c.i
-
-.PHONY : dflow_calc-skeleton.i
-
-# target to preprocess a source file
-dflow_calc-skeleton.c.i:
-	$(MAKE) -f CMakeFiles/ca_hw3.dir/build.make CMakeFiles/ca_hw3.dir/dflow_calc-skeleton.c.i
-.PHONY : dflow_calc-skeleton.c.i
-
-dflow_calc-skeleton.s: dflow_calc-skeleton.c.s
-
-.PHONY : dflow_calc-skeleton.s
-
-# target to generate assembly for a file
-dflow_calc-skeleton.c.s:
-	$(MAKE) -f CMakeFiles/ca_hw3.dir/build.make CMakeFiles/ca_hw3.dir/dflow_calc-skeleton.c.s
-.PHONY : dflow_calc-skeleton.c.s
-
 dflow_calc.o: dflow_calc.cpp.o
 
 .PHONY : dflow_calc.o
@@ -213,9 +186,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ca_hw3"
-	@echo "... dflow_calc-skeleton.o"
-	@echo "... dflow_calc-skeleton.i"
-	@echo "... dflow_calc-skeleton.s"
 	@echo "... dflow_calc.o"
 	@echo "... dflow_calc.i"
 	@echo "... dflow_calc.s"
