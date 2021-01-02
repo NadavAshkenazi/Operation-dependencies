@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/dflow_calc-skeleton.c
+dflow_calc.h
+/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/dflow_calc.h
+
+/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/dflow_calc.h
+stdlib.h
+-
+stdint.h
+-
+
+/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/dflow_main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+ctype.h
+-
+dflow_calc.h
+/mnt/c/Users/nadav ashkenazi/OneDrive - Technion/Technion/semester_6/Computer Architecture/hw/hw3/ca_hw3/dflow_calc.h
+
