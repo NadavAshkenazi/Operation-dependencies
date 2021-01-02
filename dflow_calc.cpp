@@ -72,9 +72,13 @@ bool dflow_calc::isSource(int index) {
 
 void dflow_calc::removeFromLeaves(int index){
     vector<int>::iterator it;
+    if (index ==8) //todo:debug
+        int debug = 0;
     for (it = leaves->begin(); it != leaves->end(); ++it){
-        if (*it == index)
+        if (*it == index) {
             leaves->erase(it);
+            return;
+        }
     }
 }
 
@@ -169,8 +173,6 @@ int getInstDeps(ProgCtx ctx, unsigned int theInst, int *src1DepInst, int *src2De
     vector<int> dep = calc->getDependencies(theInst);
     *src1DepInst = dep[0];
     *src2DepInst = dep[1];
-    if(calc->isSource(theInst))
-        return -1;
     return 0;
 }
 
