@@ -12,6 +12,9 @@ using namespace std;
 #define ENTRY -1
 #define EXIT -2
 
+/**
+ * a class representing an operation node in the dependencies graph
+ */
 class Operation{
 public:
     InstInfo info;
@@ -24,7 +27,9 @@ public:
 };
 
 
-
+/**
+ * a class representing a dependencies analyzer
+ */
 class dflow_calc{
 private:
     map<int,Operation*>* dependenciesGraph;
@@ -61,6 +66,11 @@ dflow_calc::~dflow_calc(){
     delete registers;
 }
 
+/**
+ * checks if an operation represented by its index in the graph has no dependencies
+ * @param index - index of the operation
+ * @return true if operation at index is a source, false otherwise
+ */
 bool dflow_calc::isSource(int index) {
     vector<int>::iterator it;
     for (it = sources->begin(); it != sources->end(); ++it){
@@ -70,6 +80,10 @@ bool dflow_calc::isSource(int index) {
     return false;
 }
 
+/**
+ * removes the operation at index from the leaves list
+ * @param index - index of the operation
+ */
 void dflow_calc::removeFromLeaves(int index){
     vector<int>::iterator it;
     if (index ==8) //todo:debug
@@ -82,30 +96,34 @@ void dflow_calc::removeFromLeaves(int index){
     }
 }
 
+/**
+ * adds a new operation to the dependencies graph
+ * @param info - info struct representing the operation
+ */
 void dflow_calc::addOperation(InstInfo info) {
     int index = dependenciesGraph->size();
     Operation* op = new Operation();
     op->info = info;
     vector<int> dep = getDependencies(info);
-    if(dep[0] == ENTRY && dep[1] == ENTRY){
+    if(dep[0] == ENTRY && dep[1] == ENTRY){ // operation has no dependencies
         sources->push_back(index);
         op->dependency1 = ENTRY;
         op->dependency2 = ENTRY;
         op->opDepth = 0;
     }
-    else if(dep[0] == ENTRY) {
+    else if(dep[0] == ENTRY) { // operation has just a left dependency
         op->dependency1 = ENTRY;
         op->dependency2 = dep[1];
         removeFromLeaves(dep[1]);
         op->opDepth = (*dependenciesGraph)[dep[1]]->opDepth + opsLatency[(*dependenciesGraph)[dep[1]]->info.opcode];
     }
-    else if(dep[1] == ENTRY) {
+    else if(dep[1] == ENTRY) { // operation has just a right dependency
         op->dependency1 = dep[0];
         removeFromLeaves(dep[0]);
         op->dependency2 = ENTRY;
         op->opDepth = (*dependenciesGraph)[dep[0]]->opDepth + opsLatency[(*dependenciesGraph)[dep[0]]->info.opcode];
     }
-    else {
+    else { // operation has 2 dependencies
         op->dependency1 = dep[0];
         removeFromLeaves(dep[0]);
         op->dependency2 = dep[1];
@@ -118,6 +136,10 @@ void dflow_calc::addOperation(InstInfo info) {
     (*dependenciesGraph)[index] = op;
 }
 
+/**
+ * @param info - info struct representing the future operation
+ * @return dependencies of a future operation
+ */
 vector<int> dflow_calc::getDependencies(InstInfo info){
     vector<int> dep = vector<int>();
     dep.push_back((*registers)[info.src1Idx]);
@@ -125,6 +147,10 @@ vector<int> dflow_calc::getDependencies(InstInfo info){
     return dep;
 }
 
+/**
+ * @param index - index of an existing operation
+ * @return dependencies of a exicting operation
+ */
 vector<int> dflow_calc::getDependencies(int index){
     vector<int> dep = vector<int>();
     dep.push_back((*dependenciesGraph)[index]->dependency1);
@@ -132,10 +158,18 @@ vector<int> dflow_calc::getDependencies(int index){
     return dep;
 }
 
+/**
+ * return the longest path to an excisting operation (non-inclusive)
+ * @param index - index of an existing operation
+ * @return
+ */
 int dflow_calc::longestPath(int index){
     return (*dependenciesGraph)[index]->opDepth;
 }
 
+/**
+ * @return the depth of the program
+ */
 int dflow_calc::getDepth(){
     int depth = 0;
     for(int i = 0; i < leaves->size(); i++){
